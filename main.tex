@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{authblk}
+\usepackage[english,russian]{babel}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\title{Code Style}
+\author{ИА-031 Гарин Н.Е.}
+\date{Февраль 2022}
+\affil{email: nikgar2002@bk.ru}
+\affil{github: gazmanka}
+
+\begin{document}
+\lstset{language=C, 
+numbers=left,
+basicstyle=\small\sffamily
+
+\maketitle
+
+\section{Введение}
+Создание Код-Стайла для C++
+
+\section{Основная часть}
+\textbf{Используемые языки программирования}
+\begin{itemize}
+    \item C/C++
+\end{itemize}
+\textbf{Пробелы и отступы}
+
+\\Операторы и операнды разделяются пробелом:
+
+\begin{lstlisting}
+int x = (a + b) * c / d;
+\end{lstlisting}
+
+Так же пробелом отделяются и фигурные скобки:
+
+\begin{lstlisting}
+if(a == 5) { return; }
+\end{lstlisting}
+\textbf{Оформление циклов и операторов управления}
+
+При использовании циклов или операторов управления используются отступы и переходы на новую строку, если это нужно:
+
+\begin{lstlisting}
+while(1) 
+{ 
+    if(a == 5) 
+    {
+        return;
+    }
+    a++;
+}
+\end{lstlisting}
+\textbf{Разделение функций и блоков кода}
+
+Функции и разные по смыслу блоки кода разделяются пустой строкой:
+\begin{lstlisting}
+int addFirst(...) 
+{
+....
+}
+
+int addLast(...) 
+{
+...
+}
+\end{lstlisting}
+\textbf{Названия функций и переменных}
+
+Названия функций и переменных должны быть логичными, не однобуквенными (названия итераторов могут состоять из одной буквы):
+\begin{lstlisting}
+int i;
+int counter;
+\end{lstlisting}
+
+Названия функций должны быть записаны в смешанном регистре и начинаться с нижнего:
+\begin{lstlisting}
+int addFirst(...) 
+{
+....
+}
+
+int addLast(...) 
+{
+...
+}
+\end{lstlisting}
+
+Именнованые константы должны быть записаны в верхнем регистре с нижним подчеркивание в качестве разделителя:
+\begin{lstlisting}
+const int N = 10;
+const int MAX_SIZE = 1000;
+\end{lstlisting}
+
+\section{Список литературы}
+
+\begin{enumerate}
+    \item https://tproger.ru/translations/stanford-cpp-style-guide/
+    \item https://habr.com/ru/post/172091/
+    \item https://habr.com/ru/company/ruvds/blog/574352/
+\end{enumerate}
+\end{document}
